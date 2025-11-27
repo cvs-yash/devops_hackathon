@@ -32,7 +32,7 @@ jobs:
           context: ./StreamSphereBackend
           file: ./StreamSphereBackend/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yash-front:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yash-back:latest
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -41,4 +41,4 @@ jobs:
           context: ./StreamSphere
           file: ./StreamSphere/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yash-back:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yash-front:latest
